@@ -1,16 +1,24 @@
-# Sistema de Diagnóstico Preditivo de Obesidade
+# 🏥 Sistema Preditivo de Apoio à Decisão Médica - Obesidade
 
-Plataforma de análise preditiva voltada para a área da saúde, especificamente para o diagnóstico de níveis de obesidade. Desenvolvi uma solução que utiliza algoritmos de aprendizado de máquina treinados em ambiente Big Data para fornecer resultados rápidos e precisos com base em parâmetros clínicos e hábitos de vida dos pacientes.
+Este repositório contém uma solução completa de Machine Learning para auxiliar equipes médicas no diagnóstico preditivo de níveis de obesidade. O projeto abrange desde o processamento de dados (ETL) até o deploy de uma aplicação interativa.
 
-## Desenvolvimento Técnico
-* **Processamento**: Realizei o ETL e a curadoria de dados utilizando PySpark.
-* **Modelagem**: Implementei um algoritmo de Random Forest, alcançando uma acurácia de 87,90%.
-* **Interface**: Desenvolvi uma aplicação interativa utilizando Streamlit para facilitar o consumo do modelo em ambiente clínico.
+## 🚀 Tecnologias Utilizadas
+* **Linguagem:** Python 3.x
+* **Processamento de Dados:** Pandas
+* **Machine Learning:** Scikit-learn (Random Forest Classifier)
+* **Interface e Deploy:** Streamlit
+* **Visualização de Dados:** Power BI
 
-## Estrutura de Arquivos
-* `app.py`: Script da interface web.
-* `modelo_obesidade_spark`: Diretório contendo os artefatos do modelo treinado.
-* `requirements.txt`: Dependências do ambiente.
+## 📊 Performance do Modelo
+O modelo alcançou uma assertividade de **94.09%** na classificação de níveis de obesidade, utilizando um pipeline otimizado que integra pré-processamento de variáveis categóricas e numéricas.
 
-## Como Executar
-Configurei o deploy automático via Streamlit Cloud. O sistema recebe variáveis como idade, peso, altura e hábitos alimentares para retornar o diagnóstico em tempo real.
+## 📂 Estrutura do Repositório
+* `app.py`: Código fonte da aplicação Streamlit.
+* `modelo_obesidade.pkl`: Pipeline do modelo treinado e exportado.
+* `requirements.txt`: Dependências necessárias para execução do projeto.
+* `base_obesidade_traduzida.csv`: Dataset tratado e traduzido para uso no Power BI.
+* `importancia_atributos.csv`: Extração da relevância de cada atributo para o diagnóstico.
+
+## 🛠️ Como Executar
+1. Instale as dependências: `pip install -r requirements.txt`
+2. Execute a aplicação: `streamlit run app.py`
