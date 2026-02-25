@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import sklearn
+
+st.write("Sklearn version:", sklearn.__version__)
 
 # Carregamento do pipeline completo e mapeamento de tradução
 model = joblib.load('modelo_obesidade.pkl')
